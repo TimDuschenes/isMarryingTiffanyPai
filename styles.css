@@ -1,0 +1,456 @@
+/*Typography*/
+@font-face {
+  font-family: 'catalogue';
+  src:  url('fonts/CatalogueLL-Regular-98b1aa5b.woff2') format('woff2'),
+}
+
+body {
+	font-variant-numeric: oldstyle-nums;
+	color: #121212;
+}
+
+h1 {
+	margin: 12px 0 0;
+	padding: 0;
+	font-family: catalogue;
+	font-weight: normal;
+	font-size: 36pt;
+	line-height: 1.2em;
+	letter-spacing: -0.02em;
+	text-align: center;
+}
+
+sup {
+	/*For the <sup> inline tag*/
+	font-size: 0.6em;
+	vertical-align: baseline;
+  position: relative;
+  top: -0.5em;
+  line-height: 0;
+}
+
+h2 {
+	margin: 0 0 24px;
+	padding: 0;
+	font-family: catalogue;
+	font-weight: normal;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 28pt;
+	letter-spacing: 0.1em;
+	font-weight: normal;
+}
+
+h3 {
+	margin: 0 0 12px;
+	padding: 0;
+	font-family: catalogue;
+	font-weight: normal;
+	border-top: 1px black solid;
+}
+
+h4 {
+	margin: 0 0 12px;
+	padding: 0;
+	font-family: catalogue;
+	font-weight: normal;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+p {
+	margin: 0 0 1em;
+	padding: 0;
+	font-family: catalogue;
+	font-weight: normal;
+}
+
+.pSmall {
+	font-size: 0.85em;
+}
+
+.subhead {
+	text-align: center;
+	font-size: 25pt;
+	line-height: 1.2em;
+	letter-spacing: -0.02em;
+}
+
+li {
+	font-family: catalogue;
+	font-weight: normal;
+}
+
+.smallCaps {
+	text-transform: lowercase;
+	font-variant: small-caps;
+	font-variant-numeric: oldstyle-nums;
+}
+
+
+/*Layout*/
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+	background-color: #FEFDF5;
+	margin: 0;
+}
+
+.headerSection {
+	box-sizing: border-box;
+	padding: 72px 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.svgHeader {
+	margin: 0 auto 24px;
+	width: 540px;
+}
+
+.svgHeader img {
+	width: 100%;
+}
+
+
+.title {
+	margin: 0 auto;
+	width: 900px;
+}
+
+.nav {
+	width: 75%;
+	max-width: 1200px;
+	margin: 72px auto 0;
+}
+
+.nav ul {
+	display: flex;
+	flex-wrap: nowrap;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav ul li {
+	float: left;
+	width: 100%;
+	padding: 8px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.nav ul li{
+	border-right: 1px solid black;
+}
+
+.nav ul li:last-child {
+	border: none;
+}
+
+.nav ul li a{
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14pt;
+	line-height: 1.2em;
+	letter-spacing: 0.08em;
+	color: #121212;
+}
+
+.nav ul li a:hover {
+	text-decoration: underline;
+}
+
+.mainSection {
+	margin: 0 auto 92px;
+	width: 50%;
+	min-width: 500px;
+	max-width: 900px;
+	display: flex;
+	flex-direction: column;
+	gap: 92px;
+}
+
+.icon {
+	margin: 0 auto 8px;
+	width: 48px;
+}
+
+.colContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+	margin: 0 0 36px;
+}
+
+.col {
+	float: left;
+	width: 100%;
+}
+
+
+.buttonContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	font-family: catalogue;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 14pt;
+	line-height: 1.2em;
+	letter-spacing: 0.08em;
+	color: #121212;
+	padding: 12px;
+	background-color: transparent;
+	border: 0.5px solid black;
+	border-radius: 4px;
+}
+
+button:hover {
+	background-color: #121212;
+	color: #FEFDF5;
+	cursor: pointer;
+}
+
+#lodging ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#lodging li {
+	border-top: 1px solid black;
+	padding: 4px 0;
+}
+
+#lodging li a {
+	text-decoration: none;
+	color: #121212;
+}
+
+#lodging li a:hover {
+	text-decoration: underline;
+}
+
+#lodging li span {
+	font-family: monospace;
+	font-size: 1.3em;
+	line-height: 0.8em;
+}
+
+.mapContainer {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin: 48px 0;
+}
+    
+.mapContainer iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: grayscale(100%);
+	mix-blend-mode: multiply;
+}
+
+.image {
+	width: 100%;
+	padding-bottom: 56%;
+	background-color: lightgrey;
+}
+
+#bottomDivider {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+	gap: 48px;
+	margin: 0 0 72px;
+}
+
+.borderBottom {
+	flex: 4;
+	height: 74px;
+	border-bottom: 1px solid black;
+}
+
+.bottomIcon {
+	width: 148px
+}
+
+.bottomIcon img {
+	width: 100%;
+}
+
+
+
+
+@media (max-width:1048px) {
+	h1 {
+		font-size: 36px;
+	}
+
+	.title {
+		width: 680px;
+	}
+
+	.mainSection {
+		width: 75%;
+	}
+}
+
+
+
+
+@media (max-width:801px) {
+	h1 {
+		font-size: 30px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+
+	.subhead {
+		font-size: 21px;
+	}
+
+	html {
+		padding: 0 18px;
+	}
+
+	body {
+		width: 100%;
+	}
+
+	button {
+		font-size: 12px;
+		margin: 0;
+	}
+
+	.title {
+		width: 100%;
+	}
+
+	.svgHeader {
+		width: 300px;
+	}
+
+	.mainSection {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 8px;
+		min-width: 0px;
+	}
+
+	.colContainer {
+		flex-direction: column;
+	}
+
+	#bottomDivider {
+		gap: 24px;
+	}
+
+
+	/*HAMBURGER MENU FOR MOBILE*/
+
+  .nav {
+    position: fixed;
+  	width: 40px;
+    margin: 0;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    background-color: #eee;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger {
+  	margin: auto;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .hamburger-line {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 2px 0;
+    transition: all 0.3s ease;
+  }
+
+  .nav.active {
+  	border-radius: 12px;
+  	width: 200px;
+  	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 3.5px);
+	}
+
+	.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+	}
+
+	.hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -3.5px);
+	}
+
+  .nav ul {
+    display: none;
+    padding: 12px;
+  }
+
+  .nav ul.open {
+    display: flex;
+    flex-direction: column;
+    animation: menuSlideIn 0.7s ease;
+  }
+
+  .nav ul li {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  
+  /* Menu Slide-in Animation */
+
+  @keyframes menuSlideIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
+
+
+}
